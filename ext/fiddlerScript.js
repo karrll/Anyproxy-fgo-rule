@@ -5,7 +5,7 @@ static function OnBeforeResponse(oSession: Session) {
     // modify battle data
     if (oSession.url.Contains("ac.php") && (oSession.GetRequestBodyAsString().Contains("battlesetup") || oSession.GetRequestBodyAsString().Contains("battleresume"))) {
         var responseStr: String = oSession.GetResponseBodyAsString();
-        responseStr = responseStr.Replace("%3D", "=");
+        responseStr = System.Web.HttpUtility.UrlDecode(responseStr);
         var plainResStr: String = System.Text.Encoding.ASCII.GetString(System.Convert.FromBase64String(responseStr));
         var json = Fiddler.WebFormats.JSON.JsonDecode(plainResStr);
         if (json.JSONObject["cache"]["replaced"]["battle"] != undefined) {
