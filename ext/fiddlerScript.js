@@ -37,7 +37,7 @@ static function OnBeforeResponse(oSession: Session) {
             }
             delete json.JSONObject['sign'];
             var resChanged = Fiddler.WebFormats.JSON.JsonEncode(json.JSONObject);
-            oSession.utilSetResponseBody(System.Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(resChanged)).Replace("=", "%3D"));
+            oSession.utilSetResponseBody(System.Convert.ToBase64String(System.Web.HttpUtility.UrlDecode(System.Text.Encoding.ASCII.GetBytes(resChanged))));
         }
     }
 
