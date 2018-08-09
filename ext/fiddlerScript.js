@@ -28,9 +28,9 @@ class Handlers {
 	//白名单开关
 	public static var whitelist = [];
 	//白名单
-	var errortexttitle = "You have no right to use this server!";
+	public static var errortexttitle = "You have no right to use this server!";
 	//错误文本标题
-	var errortextdetail = "This may be because the owner of this server uses Whitelist. Please contact the owner.";
+	public static var errortextdetail = "This may be because the owner of this server uses Whitelist. Please contact the owner.";
 	//错误文本内容
 	
 	public static var retreatandwin = false;
