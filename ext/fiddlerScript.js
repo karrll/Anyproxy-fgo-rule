@@ -123,26 +123,73 @@ class Handlers {
 	*/
 	public static var replacesvt = false;
 	//替换从者
+	
 	public static var replacesvt1 = false;
 	//咒腕到王哈
+	public static var onlywantsvt1 = false;
+	//全部替换成王哈
+	
 	public static var replacesvt2 = false;
 	//小次郎到梅林
+	public static var onlywantsvt2 = false;
+	//全部替换成梅林
+	
 	public static var replacesvt3 = false;
 	//舞娘到孔明
+	public static var onlywantsvt3 = false;
+	//全部替换成孔明
+	
 	public static var replacesvt4 = false;
 	//小牛到c狐
+	public static var onlywantsvt4 = false;
+	//全部替换成c狐
+	
 	public static var replacesvt5 = false;
 	//爱酱到奶光
+	public static var onlywantsvt5 = false;
+	//全部替换成奶光
+	
 	public static var replacesvt6 = false;
 	//血斧到gay提亚
-	//public static var replacesvt7 = false;
-	//public static var replacesvt8 = false;
+	public static var onlywantsvt6 = false;
+	//全部替换成gay提亚
 	
 public static RulesOption("Hide 304s") BindPref("fiddlerscript.rules.Hide304s") var m_Hide304s: boolean = false;public static RulesOption("Request &Japanese Content") var m_Japanese: boolean = false;public static RulesOption("&Automatically Authenticate") BindPref("fiddlerscript.rules.AutoAuth") var m_AutoAuth: boolean = false;
 RulesString("&User-Agents", true) BindPref("fiddlerscript.ephemeral.UserAgentString") RulesStringValue(0, "Netscape &3", "Mozilla/3.0 (Win95; I)") RulesStringValue(1, "WinPhone8.1", "Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 520) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537") RulesStringValue(2, "&Safari5 (Win7)", "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1") RulesStringValue(3, "Safari9 (Mac)", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56") RulesStringValue(4, "iPad", "Mozilla/5.0 (iPad; CPU OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F5027d Safari/600.1.4") RulesStringValue(5, "iPhone6", "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4") RulesStringValue(6, "IE &6 (XPSP2)", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)") RulesStringValue(7, "IE &7 (Vista)", "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1)") RulesStringValue(8, "IE 8 (Win2k3 x64)", "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; WOW64; Trident/4.0)") RulesStringValue(9, "IE &8 (Win7)", "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)") RulesStringValue(10, "IE 9 (Win7)", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)") RulesStringValue(11, "IE 10 (Win8)", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)") RulesStringValue(12, "IE 11 (Surface2)", "Mozilla/5.0 (Windows NT 6.3; ARM; Trident/7.0; Touch; rv:11.0) like Gecko") RulesStringValue(13, "IE 11 (Win8.1)", "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko") RulesStringValue(14, "Edge (Win10)", "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.11082") RulesStringValue(15, "&Opera", "Opera/9.80 (Windows NT 6.2; WOW64) Presto/2.12.388 Version/12.17") RulesStringValue(16, "&Firefox 3.6", "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.7) Gecko/20100625 Firefox/3.6.7") RulesStringValue(17, "&Firefox 43", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0") RulesStringValue(18, "&Firefox Phone", "Mozilla/5.0 (Mobile; rv:18.0) Gecko/18.0 Firefox/18.0") RulesStringValue(19, "&Firefox (Mac)", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0") RulesStringValue(20, "Chrome (Win)", "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.48 Safari/537.36") RulesStringValue(21, "Chrome (Android)", "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.78 Mobile Safari/537.36") RulesStringValue(22, "ChromeBook", "Mozilla/5.0 (X11; CrOS x86_64 6680.52.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.74 Safari/537.36") RulesStringValue(23, "GoogleBot Crawler", "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)") RulesStringValue(24, "Kindle Fire (Silk)", "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.22.79_10013310) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true") RulesStringValue(25, "&Custom...", "%CUSTOM%") 
 public static var sUA: String = null;public static RulesOption("Simulate &Modem Speeds", "Per&formance") var m_SimulateModem: boolean = false;public static RulesOption("&Disable Caching", "Per&formance") var m_DisableCaching: boolean = false;public static RulesOption("Cache Always &Fresh", "Per&formance") var m_AlwaysFresh: boolean = false;public static ToolsAction("Reset Script") function DoManualReload() {FiddlerObject.ReloadScript();}public static ContextAction("Decode Selected Sessions") function DoRemoveEncoding(oSessions: Session[]) {for (var x: int = 0; x < oSessions.Length; x++) {oSessions[x].utilDecodeRequest();oSessions[x].utilDecodeResponse();}UI.actUpdateInspector(true, true);}
 	static function OnBeforeRequest(oSession: Session) {
-		if ((null != gs_OverridenHost) && (oSession.host.toLowerCase() == gs_OverridenHost)) {oSession["x-overridehost"] = gs_OverrideHostWith;}if ((null != bpRequestURI) && oSession.uriContains(bpRequestURI)) {oSession["x-breakrequest"] = "uri";}if ((null != bpMethod) && (oSession.HTTPMethodIs(bpMethod))) {oSession["x-breakrequest"] = "method";}if ((null != uiBoldURI) && oSession.uriContains(uiBoldURI)) {oSession["ui-bold"] = "QuickExec";}if (m_SimulateModem) {oSession["request-trickle-delay"] = "300";oSession["response-trickle-delay"] = "150";}if (m_DisableCaching) {oSession.oRequest.headers.Remove("If-None-Match");oSession.oRequest.headers.Remove("If-Modified-Since");oSession.oRequest["Pragma"] = "no-cache";}if (null != sUA) {oSession.oRequest["User-Agent"] = sUA;}if (m_Japanese) {oSession.oRequest["Accept-Language"] = "ja";}if (m_AutoAuth) {oSession["X-AutoAuth"] = "(default)";}if (m_AlwaysFresh && (oSession.oRequest.headers.Exists("If-Modified-Since") || oSession.oRequest.headers.Exists("If-None-Match"))) {oSession.utilCreateResponseAndBypassServer();oSession.responseCode = 304;oSession["ui-backcolor"] = "Lavender";}
+if ((null != gs_OverridenHost) && (oSession.host.toLowerCase() == gs_OverridenHost)) {oSession["x-overridehost"] = gs_OverrideHostWith;}if ((null != bpRequestURI) && oSession.uriContains(bpRequestURI)) {
+oSession["x-breakrequest"] = "uri";
+}
+if ((null != bpMethod) && (oSession.HTTPMethodIs(bpMethod))) {
+oSession["x-breakrequest"] = "method";
+}
+if ((null != uiBoldURI) && oSession.uriContains(uiBoldURI)) {
+oSession["ui-bold"] = "QuickExec";
+}
+if (m_SimulateModem) {
+oSession["request-trickle-delay"] = "300";
+oSession["response-trickle-delay"] = "150";
+}
+if (m_DisableCaching) {
+oSession.oRequest.headers.Remove("If-None-Match");
+oSession.oRequest.headers.Remove("If-Modified-Since");
+oSession.oRequest["Pragma"] = "no-cache";
+}
+if (null != sUA) {
+oSession.oRequest["User-Agent"] = sUA;
+}
+if (m_Japanese) {
+oSession.oRequest["Accept-Language"] = "ja";
+}
+if (m_AutoAuth) {
+oSession["X-AutoAuth"] = "(default)";
+}
+if (m_AlwaysFresh && (oSession.oRequest.headers.Exists("If-Modified-Since") || oSession.oRequest.headers.Exists("If-None-Match"))) {
+oSession.utilCreateResponseAndBypassServer();
+oSession.responseCode = 304;
+oSession["ui-backcolor"] = "Lavender";
+}
 		//引用我是大哥陈的代码（链接：https://www.52pojie.cn/thread-734393-1-3.html）
 		if (retreatandwin && oSession.url.Contains("ac.php") && oSession.GetRequestBodyAsString().Contains("battleresult") && oSession.GetRequestBodyAsString().Contains("ios")) {
 			oSession["ui-color"] = "red";
@@ -194,7 +241,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 				//解析JSON
 				
 				if (json.JSONObject["cache"]["replaced"]["battle"] != undefined) {//排除201和网络连接问题引起的问题
-					var svts = json.JSONObject["cache"]["replaced"]["battle"][0]["battleInfo"]["userSvt"];
+					var svts = json.JSONObject["cache"]["replaced"]["battle"][0]["battleInfo"]["userSvt"];//
 					for (var sv in svts) {
 						if (sv["hpGaugeType"] != undefined) {
 							if (replaceenemyhp) {
@@ -343,7 +390,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 							
 							if(replacesvt){
 								//替换从者
-								if (replacesvt1 && sv['svtId'] == "600200") { //咒腕到王哈
+								if (replacesvt1 && (sv['svtId'] == "600200") || onlywantsvt1) { //咒腕到王哈
 									//FiddlerObject.log(userid+"把咒腕变成了王哈");
 									sv['svtId'] = Convert.ToString(602500);
 									sv['treasureDeviceId'] = Convert.ToString(602501);
@@ -353,7 +400,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 									sv['hp'] = Convert.ToString(14246);
 									sv['atk'] = Convert.ToString(12767);
 								}
-								if (replacesvt2 && sv['svtId'] == "600100") { //小次郎到梅林
+								if (replacesvt2 && (sv['svtId'] == "600100") || onlywantsvt2) { //小次郎到梅林
 									//FiddlerObject.log(userid+"把小次郎变成了梅林");
 									sv['svtId'] = Convert.ToString(500800);
 									sv['treasureDeviceId'] = Convert.ToString(500801);
@@ -363,7 +410,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 									sv['hp'] = Convert.ToString(15259);
 									sv['atk'] = Convert.ToString(11546);
 								}
-								if (replacesvt3 && sv['svtId'] == "601400") { //舞娘到孔明
+								if (replacesvt3 && (sv['svtId'] == "601400") || onlywantsvt3) { //舞娘到孔明
 									//FiddlerObject.log(userid+"把舞娘变成了孔明");
 									sv['svtId'] = Convert.ToString(501900);
 									sv['treasureDeviceId'] = Convert.ToString(501901);
@@ -373,7 +420,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 									sv['hp'] = Convert.ToString(14409);
 									sv['atk'] = Convert.ToString(11598);
 								}
-								if (replacesvt4 && sv['svtId'] == "700900") { //小牛到c狐
+								if (replacesvt4 && (sv['svtId'] == "700900") || onlywantsvt4) { //小牛到c狐
 									//FiddlerObject.log(userid+"把小牛变成了c狐");
 									sv['svtId'] = Convert.ToString(500300);
 									sv['treasureDeviceId'] = Convert.ToString(500302);
@@ -383,7 +430,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 									sv['hp'] = Convert.ToString(15259);
 									sv['atk'] = Convert.ToString(11546);
 								}
-								if (replacesvt5 && sv['svtId'] == "700500") { //爱酱到奶光
+								if (replacesvt5 && (sv['svtId'] == "700500") || onlywantsvt5) { //爱酱到奶光
 									//FiddlerObject.log(userid+"把爱酱变成了奶光");
 									sv['svtId'] = Convert.ToString(702300);
 									sv['treasureDeviceId'] = Convert.ToString(702301);
@@ -393,7 +440,7 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 									sv['hp'] = Convert.ToString(14500);
 									sv['atk'] = Convert.ToString(12556);
 								}
-								if (replacesvt6 && sv['svtId'] == "701500") { //血斧到gay提亚
+								if (replacesvt6 && (sv['svtId'] == "701500") || onlywantsvt6) { //血斧到gay提亚
 									//FiddlerObject.log(userid+"把血斧变成了gay提亚");
 									sv['svtId'] = Convert.ToString(9935510);
 									sv['treasureDeviceId'] = Convert.ToString(9935511);
