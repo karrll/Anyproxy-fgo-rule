@@ -488,21 +488,18 @@ static function OnPeekAtResponseHeaders(oSession:Session){if(m_DisableCaching){o
 				var resChanged = Fiddler.WebFormats.JSON.JsonEncode(json.JSONObject);
 
 				resChanged = resChanged.Replace("isFollowerSvt\":true", "isFollowerSvt\":false");
-				//
 
 				oSession.utilSetResponseBody(System.Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(resChanged)).Replace("=", "%3D"));
+			}else {
+				var mytext = "{\"response\":[{\"resCode\":\"88\",\"success\":{},\"fail\":{\"title\":\""+errortexttitle+"\",\"detail\":\""+errortextdetail+"\",\"action\":\"goto_title\"},\"nid\":\"\"}],\"cache\":{\"updated\":{},\"replaced\":{},\"serverTime\":1533192034}}";
+				var timestamp = Date.parse(new Date());
+				//获取当前的UNIX时间戳
+				var timestampreg = /(?<="serverTime":)\d\d\d\d\d\d\d\d\d\d+/gi;
+				mytext = mytext.replace(timestampreg, timestamp);
+				//将文本中旧的UNIX替换成新的
+				oSession.utilSetResponseBody(System.Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(mytext)).Replace("=", "%3D"));
+				//把=变成%3D，Base64编码，替换Respond的Body
 			}
-
-		} else {
-			//FiddlerObject.log("没有权限的"+userid+"开启了一场战斗并浪费了AP");
-			var mytext = "{\"response\":[{\"resCode\":\"88\",\"success\":{},\"fail\":{\"title\":\""+errortexttitle+"\",\"detail\":\""+errortextdetail+"\",\"action\":\"goto_title\"},\"nid\":\"\"}],\"cache\":{\"updated\":{},\"replaced\":{},\"serverTime\":1533192034}}";
-			var timestamp = Date.parse(new Date());
-			//获取当前的UNIX时间戳
-			var timestampreg = /(?<="serverTime":)\d\d\d\d\d\d\d\d\d\d+/gi;
-			mytext = mytext.replace(timestampreg, timestamp);
-			//将文本中旧的UNIX替换成新的
-			oSession.utilSetResponseBody(System.Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(mytext)).Replace("=", "%3D"));
-			//把=变成%3D，Base64编码，替换Respond的Body
 		}
 	}
 
